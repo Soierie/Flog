@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="movie-infomation text-center">
+    <h1><%= @movie_title %></h1>
+    <div class="about-movie">
+      <p><%= image_tag("https://image.tmdb.org/t/p/w200/" + @movie_poster) %></p>
+      <p class="story"><%=  @movie_story %></p>
+      <% if current_user  %>
+        <% if current_user.wrriten_flogs.where(movie_id: params[:id]).exists? %>
+
+        <% elsif current_user.my_lists.where(movie_id: params[:id]).exists? %>
+          <button><%= link_to "Flog", new_flog_path(id: @search.id) %></button>
+        <% else %>
+          <button><%= link_to "Flog", new_flog_path(id: @search.id) %></button>
+          <button><%= link_to "MyList", mylists_path(id: @search.id), method: :post %></button>
+        <% end %>
+      <%else%>
+
+          <button><%= link_to "Flog", new_user_session_path %></button>
+          <button><%= link_to "MyList", new_user_session_path  %></button>
+
+      <%end%>
+        <button><%= link_to "他の人のFlogを見る", flog_path(@search.id) %></button>
+    </div>
+  </div>
+</div>
