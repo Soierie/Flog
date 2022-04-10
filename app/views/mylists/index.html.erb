@@ -1,4 +1,5 @@
 <div class="container-fluid">
+  <h3 class="text-center m-5">MtList</h3>
   <div class="row">
     <div class="col-lg-2">
       <div class="card profile-card">
@@ -17,12 +18,11 @@
                <%= @user.followed.count %>フォロワー
               <% end %>
             </div>
-          </div>         
+          </div>
         </div>
       </div>
     </div>
   <div class="col-lg-10">
-    <h3 class="text-center m-5">MtList</h3>
     <div class="row">
       <% @mylists.each do |mylist| %>
       <div class="col-lg-3 mb-2">
@@ -39,7 +39,7 @@
             <div class="mylist-delete-button">
               <%= link_to mylist_path(mylist.id), method: :delete do %>
               <%= image_tag("trash-3.svg") %>
-              <% end %>            
+              <% end %>
             </div>
           </div>
         </div>

@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  validates :introduction, length: {maximum: 100}
+
   def active_for_authentication?
     super && (is_active == true)
   end
@@ -20,6 +22,9 @@ class User < ApplicationRecord
   def following?(user_id)
     followings.include?(user_id)
   end
+
+  validates :nickname, presence: true
+  validates :email, presence: true, uniqueness: true
 
   attachment :image
   has_many :wrriten_flogs, dependent: :destroy
