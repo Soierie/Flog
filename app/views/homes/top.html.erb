@@ -13,11 +13,11 @@
         <div class="col-lg-3 mb-2">
             <div class="result card">
                 <div class="text-center">
-                  <%= link_to movie_path(result["table"]["id"]) do %>
+                  <%= link_to movie_path(result["table"]["id"],class: "link" ) do %>
                   <p><%= image_tag("https://image.tmdb.org/t/p/w154/" + result["table"]["poster_path"]) %></p>
                 </div>
                 <div class="card-body">
-                  <p><%= result["table"]["title"] %></p>
+                  <p><%= result["table"]["title"]%></p>
                 </div>
                    <% end %>
             </div>

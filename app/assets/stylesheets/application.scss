@@ -22,6 +22,11 @@ body{
   padding: 0 70px;
 }
 
+.link{
+  text-decoration: none;
+  color: bla;
+}
+
 // 新規登録画面
 .form-group{
   text-align: center;
@@ -31,6 +36,7 @@ body{
 
 // ヘッダーb
 .logo{
+ margin-top: 20px;
  width: 350px;
 }
 
@@ -48,7 +54,7 @@ body{
 .search-form > form {
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
 }
 
 .result{
@@ -56,7 +62,7 @@ body{
 }
 
 main{
-  min-height: 100%;
+ margin-bottom: 200px;
 }
 
 // 映画詳細画面
@@ -77,16 +83,6 @@ main{
 
 // プロフィール編集画面
 
-.button {
-display: flex;
-font-size: 18px;
-display: inline-block;
-padding: 0.5em 1em 0.3em;
-color: #ff3399;
-border: double 4px #ff3399;
-background-color: #ffffff;
-cursor: pointer;
-}
 
 .card{
   border:inherit;
@@ -110,8 +106,7 @@ cursor: pointer;
 }
 
 .else-review{
-  height: 180px;
-  over-flow: scroll;
+  height: 140px;
 }
 
 .flog-item{
@@ -119,20 +114,10 @@ cursor: pointer;
 }
 
 .else-flog-item{
-  height: 600px;
-}
-
-.else-flog-review{
-  height: 400px;
-}
-
-.else-flog-review-area{
-  height: 140px;
+  height: 360px;
 }
 
 .profile-card {
-  margin-top: 132px;
-
   @media screen and (max-width: 991px) {
     margin-top: 50px;
   }
@@ -195,4 +180,5 @@ cursor: pointer;
   left: 10px;
   bottom: 10px;
 }
+
 
