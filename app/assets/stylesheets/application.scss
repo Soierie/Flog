@@ -27,6 +27,11 @@ a{
   color: black;
 }
 
+a:hover{
+  text-decoration: none;
+  color: #808080;
+}
+
 // 新規登録画面
 .form-group{
   text-align: center;
@@ -196,6 +201,10 @@ main{
   position: absolute;
   left: 10px;
   bottom: 10px;
+}
+
+.like{
+  color: pink;
 }
 
 
