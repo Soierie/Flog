@@ -207,6 +207,16 @@ main{
   color: pink;
 }
 
+@media screen and (max-width: 425px) {
+  .logo{
+    width: 200px;
+  }
+
+  .movie_poster{
+    width: 200px;
+  }
+
+}
 
 
 
