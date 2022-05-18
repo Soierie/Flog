@@ -4,7 +4,7 @@
       <div class="movie-infomation">
         <h1><%= @movie_title %></h1>
         <div class="about-movie">
-          <p><%= image_tag("https://image.tmdb.org/t/p/w200/" + @movie_poster) %></p>
+          <p class="movie_poster"><%= image_tag("https://image.tmdb.org/t/p/w200/" + @movie_poster) %></p>
           <p class="story"><%=  @movie_story %></p>
           <% if current_user  %>
             <% if current_user.wrriten_flogs.where(movie_id: params[:id]).exists? %>
