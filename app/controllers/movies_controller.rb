@@ -3,9 +3,6 @@ class MoviesController < ApplicationController
   Tmdb::Api.key("de02a1639be95fbfec0058fd054d9de5")
   Tmdb::Api.language("ja")
 
-  def search
-  end
-
   def show
     @search = Tmdb::Movie.detail(params[:id])
     @movie_title = @search["title"]
