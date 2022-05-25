@@ -53,26 +53,8 @@
               </div>
               <p class="card-text else-review"><%= flog.review %></p>
               <div class="card-text"><%= flog.created_at.strftime('%Y/%m/%d') %></div>
-              <div class="card-text">
-                <%if current_user%>
-                  <% if flog.liked_by?(current_user) %>
-                  <p>
-                    <%= link_to flog_likes_path(flog.id), method: :delete, class:'likes' do %>
-                    ♥　<%= flog.likes.count %>
-                    <% end %>
-                  </p>
-                  <% else %>
-                  <p>
-                    <%= link_to flog_likes_path(flog.id), method: :post do %>
-                    ♡　<%= flog.likes.count %>
-                    <% end %>
-                  </p>
-                  <% end %>
-                <%else%>
-                   <%= link_to new_user_session_path do %>
-                    ♡　<%= flog.likes.count %>
-                    <% end %>
-                <%end%>
+              <div id="favorite_buttons_<%= flog.id %>", class="card-text">
+                <%= render "flogs/like", flog: flog %>
               </div>
             </div>
           </div>

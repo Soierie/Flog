@@ -23,9 +23,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def check
-  end
-
   def withdraw
     @user = current_user
     @user.update(is_active: false)
