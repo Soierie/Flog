@@ -37,7 +37,7 @@ ER図：https://app.diagrams.net/#G1KdsmgpbcOZak8HEe4P16IdN4G2JgCGMI
 https://docs.google.com/spreadsheets/d/16zp1cbvFYnd6g7ZkRNdHdK_95QItgJD1e71dAD4EVv4/edit#gid=0
 
 ## 開発環境
-- OS：Linux(CentOS)
+- OS：Linux2(CentOS)
 - 言語：HTML,CSS,JavaScript,Ruby,SQL
 - フレームワーク：Ruby on Rails
 - JSライブラリ：jQuery
